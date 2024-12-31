@@ -4,7 +4,14 @@ class Lotto {
   }
 
   // 중복 체크
-  createNumbers(array, target) {}
+  createNumbers(array, target) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === target) {
+        return;
+      }
+    }
+    this.numbers.push(target);
+  }
 
   // 랜덤 번호 생성
   generateRandomNumber() {
