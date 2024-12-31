@@ -23,9 +23,16 @@ class Lotto {
       this.createNumbers(this.numbers, randomNum);
     }
   }
+
+  //      오름차순
+  displayNumbers() {
+    return this.numbers.sort((a, b) => {
+      return a - b;
+    });
+  }
 }
 
 const lotto = new Lotto();
 
-console.log(lotto.generateRandomNumber());
-console.log(lotto.createNumbers());
+lotto.generateRandomNumber();
+console.log(lotto.displayNumbers());
